@@ -1,13 +1,22 @@
 {
   "name": "fallingblocks",
   "version": "1.0.0",
-  "description": "",
+  "description": "random x and  radom y increase onl;y y on interval",
+  "keywords": [],
+  "homepage": "https://github.com/krish-patel-simform/falling-block-game#readme",
+  "bugs": {
+    "url": "https://github.com/krish-patel-simform/falling-block-game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krish-patel-simform/falling-block-game.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"tsc && cp -r index.html *.css dist"
+  }
 }
