@@ -17,6 +17,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc && cp -r index.html *.css dist"
+    "build": "tsc && cp -r index.html *.css dist"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
   }
 }
