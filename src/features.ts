@@ -45,7 +45,7 @@ export function startGame()
     if(timer)
         clearInterval(timer)
     
-    const timeout = 1000 - (state.difficulty * 100)
+    const timeout = 1000 - (state.difficulty * 50)
     if(!timeout)
     {
         if(timer)
@@ -61,16 +61,24 @@ export function startGame()
 //User click block
 export function blockClick()
 {
-    // check if is end 
-    state.score += 100
-    console.log("Score:",state.score)
-    scoreEle.textContent = state.score.toString()
-
-    //Increase difficulty
-    state.difficulty += 1
-
-    // start game()
-    startGame()
+    if(state.lives <= 0)
+    {
+        if(timer)
+            stopGame(timer)
+    }
+    else
+    {
+        // check if is end 
+        state.score += 100
+        console.log("Score:",state.score)
+        scoreEle.textContent = state.score.toString()
+    
+        //Increase difficulty
+        state.difficulty += 1
+    
+        // start game()
+        startGame()
+    }
 }
 
 function stopGame(timerId:number)
